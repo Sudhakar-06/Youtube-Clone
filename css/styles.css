@@ -142,7 +142,7 @@ header {
    background: rgba(0, 0, 0, 0.8);
    font-size: 12px; 
    font-weight: 500;
-   border-radius: 50%;
+   border-radius: 4px;
    padding: 5px 10px;
    color: var(--white-text);
 }
