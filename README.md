@@ -23,7 +23,7 @@ Screenshots coming soon.
 
 ## Planned Features
 
-- [✓] Header with search bar
+- [/] Header with search bar
 - [ ] Sidebar navigation
 - [ ] Responsive video grid
 - [ ] Dark mode
@@ -35,11 +35,12 @@ Screenshots coming soon.
     youtube-clone/
     ├── index.html
     ├── css/
+    |   └── styles.css
     ├── js/
     └── assets/
         ├── icons/
-        └── thumbnails/
         └── channels/
+        └── thumbnails/
 
 ## Running Locally
 
@@ -49,13 +50,10 @@ Screenshots coming soon.
 ## Progress Log
 
 - Day 1: Project setup, folder structure, CSS variables
-- Day 2: Header setup
-- Day 3: Add Recommendation Chips under the Header
-- Day 4: Crated a Video grid woth the thumbnail, avatar, title & video stats
 
 ## Author
 
-[Sudhakar] - [Sudhakar-06]
+[Sudhakar] - [https://www.github.Sudhakar-06.com]
 
 ## Disclaimer
 
