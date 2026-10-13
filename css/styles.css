@@ -168,6 +168,7 @@ header {
    --webkit-line-clamp: 2;
    display: -webkit-box;
    -webkit-box-orient: vertical;
+   -line-clamp: 2;
    overflow: hidden;
    font-size: 16px;
    font-weight: 500;
