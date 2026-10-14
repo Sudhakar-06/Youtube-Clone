@@ -1,11 +1,11 @@
-:root{
+/* ===== Predefined COLORS ===== */
+:root {
    --color-bg: #ffffff;
    --main-text: #0f0f0f;
    --secondary-text: #606060;
    --notification-badge: #e5002b;
    --chip-bg: #f2f2f2;
    --active-chip-bg: #0f0f0f;
-   --white-text: #ffffff;
 }
 
 * {
@@ -13,7 +13,7 @@
    padding: 0;
    box-sizing: border-box;
 }
-   
+
 body {
    font-family: Roboto, Arial, sans-serif;
    color: var(--main-text);
@@ -21,23 +21,41 @@ body {
    padding-top: 48px;
 }
 
-/* Header Layout */
+/* ===== Header ===== */
 header {
    position: fixed;
    top: 0;
    left: 0;
    right: 0;
-   width: 100%;
    height: 48px;
-
+   z-index: 100;
+   
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 0 12px;
    background-color: var(--color-bg);
-   z-index: 100;
 }
 
+/* icon button */
+.icon-button {
+   flex-shrink: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border: none;
+   background: none;
+   cursor: pointer;
+}
+
+.header-icon {
+   width: 24px;
+   height: 24px;
+}
+
+/* logo */
 .logo {
    height: 22px;
 }
@@ -47,46 +65,32 @@ header {
    gap: 4px;
 }
 
-.header-actions button{
-   border: none;
-   background: none;
-   height: 40px;
-   width: 40px;
-
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.header-icons {
-   height: 24px;
-   width: 24px;
-}
-
+/* Notifications badge */
 .bell-button {
    position: relative;
 }
-.bell-button span {
+.badge {
    position: absolute;
    top: 6px;
    right: 3px;
+   padding: 2px 4px;
+   border-radius: 10px;
+   background-color:var(--notification-badge);
+   color: #ffffff;
    font-size: 10px;
    font-weight: 500;
-   background-color: var(--notification-badge);
-   padding: 2px 3px;
-   border-radius: 50%;
 }
 
-/* Chips */
+/* ===== ChipsBar ===== */
 .chips {
    display: flex;
    gap: 8px;
-   overflow-x: auto;
-   scrollbar-width:none;
    padding: 12px;
+   overflow-x: auto;
+   scrollbar-width: none;
 }
 
-.chips::webkit-scrollbar {
+.chips::-webkit-scrollbar {
    display: none;
 }
 
@@ -96,15 +100,16 @@ header {
    justify-content: center;
    align-items: center;
    height: 36px;
-   padding: 5px 15px;
+   padding: 0 15px;
    border: none;
    border-radius: 10px;
    background: var(--chip-bg);
    color: var(--main-text);
+   font-family: inherit;
    font-size: 14px;
    font-weight: 500;
-   font-family: inherit;
    white-space: nowrap;
+   cursor: pointer;
 }
 
 .chip:first-child {
@@ -123,66 +128,70 @@ header {
    color: #ffffff;
 }
 
-/* Thumbnail CSS */
+/* ===== Video Card ===== */
+.video-card {
+   margin-bottom: 15px;
+}
+
+/* thumbnail */
 .thumbnail-wrapper {
    position: relative;
 }
 
-.thumbnail-wrapper img{
-   width: 100%;
-   aspect-ratio: 16/9;
-   object-fit: contain;
+.thumbnail {
    display: block;
+   width: 100%;
+   aspect-ratio: 16 / 9;
+   object-fit: cover;
+   border-radius: 10px;
 }
 
 .duration {
    position: absolute;
    bottom: 8px;
    right: 8px;
-   background: rgba(0, 0, 0, 0.6);
-   font-size: 12px; 
-   font-weight: 500;
-   border-radius: 12px;
    padding: 3px 6px;
-   color: var(--white-text);
+   border-radius: 12px;
+   background: rgba(0, 0, 0, 0.6);
+   color: #ffffff;
+   font-size:12px;
+   font-weight: 500;
 }
 
+/* Info row */
 .video-info {
    display: flex;
-   padding: 12px;
    gap: 12px;
+   padding:12px;
 }
 
 .avatar {
-   height: 32px;
-   width: 32px;
-   border-radius: 50%;
+   flex-shrink: 0;
+   width: 36px;
+   height: 36px;
+   border-radius:50%;
    object-fit: cover;
 }
 
 .video-details {
+   flex:1;
    min-width: 0;
 }
 
-.video-details h3{
-   --webkit-line-clamp: 2;
+.title {
    display: -webkit-box;
    -webkit-box-orient: vertical;
-   -line-clamp: 2;
+   -webkit-line-clamp: 2;
+   line-clamp: 2;
    overflow: hidden;
    font-size: 16px;
    font-weight: 500;
-   line-height:22px;
+   line-height: 22px;
 }
 
-.video-details p {
+.stats {
+   margin-top: 4px;
    color: var(--secondary-text);
    font-size: 13px;
    line-height: 18px;
-}
-
-.more_vert {
-   border: none;
-   height: 10px;
-   background: none;
 }
