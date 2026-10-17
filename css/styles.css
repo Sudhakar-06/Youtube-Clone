@@ -195,3 +195,77 @@ header {
    font-size: 13px;
    line-height: 18px;
 }
+
+/* ===== Footer ===== */
+.bottom-nav {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 56px;
+   z-index: 100;
+
+   display: flex;
+   background-color: var(--color-bg);
+   border-top: 1px solid var(--border-color);
+}
+
+.nav-item {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 4px;
+   color:inherit;
+   text-decoration: none;
+}
+
+.nav-icon {
+   width: 24px;
+   height: 24px;
+}
+
+.nav-label {
+   font-size: 10px;
+   line-height: 12px;
+}
+
+.nav-item.active .nav-label {
+   font-weight: 500;
+}
+
+/* create circle */
+.create-circle {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background: var(--chip-bg);
+}
+
+/* subscriptions */
+.icon-wrapper {
+   position: relative;
+   display: flex;
+}
+
+.dot {
+   position: absolute;
+   top: -1px;
+   right: -2px;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: var(--notification-badge);
+}
+
+/* profile picture */
+.profile-pic {
+   width: 26px;
+   height: 26px;
+   border-radius: 50%;
+   object-fit: cover;
+}
