@@ -1,45 +1,35 @@
-/* ===== Predefined COLORS ===== */
+/* ===== VARIABLES ===== */
 :root {
    --color-bg: #ffffff;
    --main-text: #0f0f0f;
    --secondary-text: #606060;
    --notification-badge: #e5002b;
    --chip-bg: #f2f2f2;
+   --border-color: #e5e5e5;
+   --chip-hover-bg: #e5e5e5;
+   --focus-color: #065fd4;
    --active-chip-bg: #0f0f0f;
 }
 
+/* ===== RESET ===== */
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
 }
 
 body {
    font-family: Roboto, Arial, sans-serif;
    color: var(--main-text);
    background-color: var(--color-bg);
-   padding-top: 48px;
+   padding-top: 48px; /* covering up the header height */
+   padding-bottom: 56px; /* covering up the footer height */
 }
 
-/* ===== Header ===== */
-header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   right: 0;
-   height: 48px;
-   z-index: 100;
-   
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0 12px;
-   background-color: var(--color-bg);
-}
-
-/* icon button */
+/* ===== ICON BUTTON ===== */
 .icon-button {
-   flex-shrink: 0;
+   flex-shrink: 0; /* never squash buttons */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -55,7 +45,22 @@ header {
    height: 24px;
 }
 
-/* logo */
+/* ===== HEADER ===== */
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 48px;
+   z-index: 100;
+
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 12px;
+   background-color: var(--color-bg);
+}
+
 .logo {
    height: 22px;
 }
@@ -65,37 +70,38 @@ header {
    gap: 4px;
 }
 
-/* Notifications badge */
+/* Notification badge */
 .bell-button {
    position: relative;
 }
+
 .badge {
    position: absolute;
    top: 6px;
    right: 3px;
    padding: 2px 4px;
    border-radius: 10px;
-   background-color:var(--notification-badge);
+   background-color: var(--notification-badge);
    color: #ffffff;
    font-size: 10px;
    font-weight: 500;
 }
 
-/* ===== ChipsBar ===== */
+/* ===== CHIPS BAR ===== */
 .chips {
    display: flex;
    gap: 8px;
    padding: 12px;
-   overflow-x: auto;
-   scrollbar-width: none;
+   overflow-x: auto; /* scroll sideways */
+   scrollbar-width: none; /* hides the scrollbar */
 }
 
 .chips::-webkit-scrollbar {
-   display: none;
+   display: none; /* Hides the Scrollbar */
 }
 
 .chip {
-   flex-shrink: 0;
+   flex-shrink: 0;   /* Chips scroll instead of squashing */
    display: flex;
    justify-content: center;
    align-items: center;
@@ -128,12 +134,12 @@ header {
    color: #ffffff;
 }
 
-/* ===== Video Card ===== */
+/* ===== VIDEO CARD ===== */
 .video-card {
-   margin-bottom: 15px;
+   margin-bottom: 10px;
 }
 
-/* thumbnail */
+/* Thumbnail */
 .thumbnail-wrapper {
    position: relative;
 }
@@ -143,43 +149,42 @@ header {
    width: 100%;
    aspect-ratio: 16 / 9;
    object-fit: cover;
-   border-radius: 10px;
 }
 
 .duration {
    position: absolute;
    bottom: 8px;
    right: 8px;
-   padding: 3px 6px;
-   border-radius: 12px;
-   background: rgba(0, 0, 0, 0.6);
+   padding:3px 5px;
+   border-radius: 6px;
+   background: rgba(0, 0, 0, 0.8);
    color: #ffffff;
-   font-size:12px;
+   font-size: 12px;
    font-weight: 500;
 }
 
-/* Info row */
+/* INFO ROW */
 .video-info {
    display: flex;
    gap: 12px;
-   padding:12px;
+   padding: 12px;
 }
 
 .avatar {
    flex-shrink: 0;
    width: 36px;
    height: 36px;
-   border-radius:50%;
+   border-radius: 50%;
    object-fit: cover;
 }
 
 .video-details {
-   flex:1;
-   min-width: 0;
+   flex: 1;   /* takes all free space */
+   min-width: 0;   /* allows the text to shrink */
 }
 
 .title {
-   display: -webkit-box;
+   display: -webkit-box;   /* 4 lines below work together */
    -webkit-box-orient: vertical;
    -webkit-line-clamp: 2;
    line-clamp: 2;
@@ -196,7 +201,7 @@ header {
    line-height: 18px;
 }
 
-/* ===== Footer ===== */
+/* ===== BOTTOM NAVIGATION BAR ===== */
 .bottom-nav {
    position: fixed;
    bottom: 0;
@@ -217,7 +222,7 @@ header {
    justify-content: center;
    align-items: center;
    gap: 4px;
-   color:inherit;
+   color: inherit;
    text-decoration: none;
 }
 
@@ -235,7 +240,7 @@ header {
    font-weight: 500;
 }
 
-/* create circle */
+/* gray + circle */
 .create-circle {
    display: flex;
    justify-content: center;
@@ -246,7 +251,7 @@ header {
    background: var(--chip-bg);
 }
 
-/* subscriptions */
+/* Subscriptions Icon with Red Dot */
 .icon-wrapper {
    position: relative;
    display: flex;
@@ -262,10 +267,39 @@ header {
    background-color: var(--notification-badge);
 }
 
-/* profile picture */
+/* ProfilePicture */
 .profile-pic {
    width: 26px;
    height: 26px;
    border-radius: 50%;
    object-fit: cover;
+}
+
+/* ===== INTERACTION STATES ===== */
+/* Tap Feedback */
+.icon-button:acticve {
+   background: var(--chip-bg);
+   border-radius: 50%;
+}
+
+/* :not(.active) stopsthe selected chip from turning gray */
+.chip:not(.active):active {
+   background: var(--chip-hover-bg);
+}
+
+@media (hover: hover) {
+   .icon-button:hover {
+      background: var(--chip-bg);
+      border-radius: 50%;
+   }
+
+   .chip:not(.active):hover {
+      background: var(--chip-hover-bg);
+   }
+}
+
+a:focus-visible,
+button:focus-visible {
+   outline: 2px solid var(--focus-color);
+   outline-offset: 2px;
 }
