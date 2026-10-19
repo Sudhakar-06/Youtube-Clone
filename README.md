@@ -24,6 +24,7 @@ Screenshots coming soon.
 ## Planned Features
 
 - [/] Header with search bar
+- [/]
 - [ ] Sidebar navigation
 - [ ] Responsive video grid
 - [ ] Dark mode
