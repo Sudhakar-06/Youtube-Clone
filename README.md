@@ -23,8 +23,10 @@ Screenshots coming soon.
 
 ## Planned Features
 
-- [/] Header with search bar
-- [/]
+- [ ] Header with search bar
+- [/] Header with Logo , Notification & Search Icon
+- [/] Main Content with Video Grids containing a Thumbnail & Video info
+- [/] Footer Containing the 5 nav links
 - [ ] Sidebar navigation
 - [ ] Responsive video grid
 - [ ] Dark mode
